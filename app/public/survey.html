@@ -18,6 +18,9 @@
 
     <!-- custom CSS -->
     <link rel="stylesheet" type="text/css" media="screen" href="../assets/css/style.css" />
+    <!-- Chosen -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chosen/1.5.1/chosen.jquery.min.js"></script>
 
 </head>
 
@@ -135,58 +138,30 @@
         </footer>
     </div>
 
-    <script type="text/javascript">
+    <!-- Modal -->
+    <div id="results-modal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h2 class="modal-title">
+                        <strong>Best Match</strong>
+                    </h2>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <h2 id="match-name"></h2>
+                    <img id="match-img" src="dummy.img" style="max-height: 50vh; max-width: 50vh" alt="matchimage">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
 
-        function createFriend (name,photo,scores) {
-              this.name = name;
-              this.photo = photo;
-              this.scores = scores
-        }
+        </div>
+    </div>
 
-        // When user submits the survery below logic gets executed 
-    
-        $("#submit").on("click", function(event) {
-
-          event.preventDefault();
-
-          // get name & photo details
-          var name = $('#name').val().trim();
-          var photo = $('#photo').val().trim();
-          
-          if (name == "" || photo == "" ) {
-            alert("Must provide name & Photo!");
-            return false
-          }
-          
-
-          // get all options values
-          var scores = [];
-          for (i = 0; i < $('.wrapquestion .custom-range').length; i++) {
-              scores.push($('.wrapquestion .custom-range')[i].value);
-            };
-        
-          var newFriend = new createFriend(name,photo,scores);
-
-          // post the successfully validated request to server
-    
-          $.post("/api/friends", newFriend,
-            function(data) {
-    
-              // response receive as true, we are successful.
-              if (data) {
-                alert("Yay!");
-              }
-    
-              // If a table is available... tell user they on the waiting list.
-              else {
-                alert("something went wrong! please try again!");
-              }
-    
-            });
-    
-        });
-    
-    </script>
+    <script type="text/javascript" src="../assets/javascript/survey.js"></script>
 
 </body>
 
