@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Survey-FriendFinder</title>
+
+    <!-- Latest jquery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+
+
+    <!-- Latest compiled and minified CSS & JS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
+        crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" integrity="sha384-smHYKdLADwkXOn1EmN1qk/HfnUcbVRZyYmZ4qpPea6sjB/pTJ0euyQp0Mk8ck+5T"
+        crossorigin="anonymous"></script>
+
+    <!-- custom CSS -->
+    <link rel="stylesheet" type="text/css" media="screen" href="../assets/css/style.css" />
+
+</head>
+
+<body>
+
+    <div class="container-fluid text-light">
+        <h2 class="text-center my-2 text-info">Survey Questions</h2>
+        <h6 class="text-warning">Name* (Required)</h6>
+        <input type="text" id="name" class="form-control" required>
+        <br>
+        <h6 class="text-warning">Link to Photo Image* (Required)</h6>
+        <input type="text" id="photo" class="form-control" required>
+        <br>
+        <div class="wrapquestion my-2">
+            <label for="customRange1" class="text-secondary font-weight-bold">Question 1:</label>
+            <h5 class="font-italic">Your mind is always buzzing with unexplored ideas and plans.</h5>
+            <input type="range" class="custom-range" min="1" max="5" id="customRange1">
+            <p>
+                <a class="text-left text-danger">Strongly Disagree(1)</a>
+                <a class="text-right float-right text-success">Strongly Agree(5)</a>
+            </p>
+        </div>
+        <div class="wrapquestion my-2">
+            <label for="customRange2" class="text-secondary font-weight-bold">Question 2:</label>
+            <h5 class="font-italic">Generally speaking, you rely more on your experience than your imagination.</h5>
+            <input type="range" class="custom-range" min="1" max="5" id="customRange2">
+            <p>
+                <a class="text-left text-danger">Strongly Disagree(1)</a>
+                <a class="text-right float-right text-success">Strongly Agree(5)</a>
+            </p>
+        </div>
+        <div class="wrapquestion my-2">
+            <label for="customRange3" class="text-secondary font-weight-bold">Question 3:</label>
+            <h5 class="font-italic">You find it easy to stay relaxed and focused even when there is some pressure.</h5>
+            <input type="range" class="custom-range" min="1" max="5" id="customRange3">
+            <p>
+                <a class="text-left text-danger">Strongly Disagree(1)</a>
+                <a class="text-right float-right text-success">Strongly Agree(5)</a>
+            </p>
+        </div>
+        <div class="wrapquestion my-2">
+            <label for="customRange4" class="text-secondary font-weight-bold">Question 4:</label>
+            <h5 class="font-italic">You rarely do something just out of sheer curiosity.</h5>
+            <input type="range" class="custom-range" min="1" max="5" id="customRange4">
+            <p>
+                <a class="text-left text-danger">Strongly Disagree(1)</a>
+                <a class="text-right float-right text-success">Strongly Agree(5)</a>
+            </p>
+        </div>
+        <div class="wrapquestion my-2">
+            <label for="customRange5" class="text-secondary font-weight-bold">Question 5:</label>
+            <h5 class="font-italic">People can rarely upset you.</h5>
+            <input type="range" class="custom-range" min="1" max="5" id="customRange5">
+            <p>
+                <a class="text-left text-danger">Strongly Disagree(1)</a>
+                <a class="text-right float-right text-success">Strongly Agree(5)</a>
+            </p>
+        </div>
+        <div class="wrapquestion my-2">
+            <label for="customRange6" class="text-secondary font-weight-bold">Question 6:</label>
+            <h5 class="font-italic">It is often difficult for you to relate to other people’s feelings.</h5>
+            <input type="range" class="custom-range" min="1" max="5" id="customRange6">
+            <p>
+                <a class="text-left text-danger">Strongly Disagree(1)</a>
+                <a class="text-right float-right text-success">Strongly Agree(5)</a>
+            </p>
+        </div>
+        <div class="wrapquestion my-2">
+            <label for="customRange7" class="text-secondary font-weight-bold">Question 7:</label>
+            <h5 class="font-italic">In a discussion, truth should be more important than people’s sensitivities.</h5>
+            <input type="range" class="custom-range" min="1" max="5" id="customRange7">
+            <p>
+                <a class="text-left text-danger">Strongly Disagree(1)</a>
+                <a class="text-right float-right text-success">Strongly Agree(5)</a>
+            </p>
+        </div>
+        <div class="wrapquestion my-2">
+            <label for="customRange8" class="text-secondary font-weight-bold">Question 8:</label>
+            <h5 class="font-italic">You rarely get carried away by fantasies and ideas.</h5>
+            <input type="range" class="custom-range" min="1" max="5" id="customRange8">
+            <p>
+                <a class="text-left text-danger">Strongly Disagree(1)</a>
+                <a class="text-right float-right text-success">Strongly Agree(5)</a>
+            </p>
+        </div>
+        <div class="wrapquestion my-2">
+            <label for="customRange9" class="text-secondary font-weight-bold">Question 9:</label>
+            <h5 class="font-italic">You think that everyone’s views should be respected regardless of whether they are supported by facts or not.</h5>
+            <input type="range" class="custom-range" min="1" max="5" id="customRange9">
+            <p>
+                <a class="text-left text-danger">Strongly Disagree(1)</a>
+                <a class="text-right float-right text-success">Strongly Agree(5)</a>
+            </p>
+        </div>
+        <div class="wrapquestion my-2">
+            <label for="customRange10" class="text-secondary font-weight-bold">Question 10:</label>
+            <h5 class="font-italic">You feel more energetic after spending time with a group of people.</h5>
+            <input type="range" class="custom-range" min="1" max="5" id="customRange10">
+            <p>
+                <a class="text-left text-danger">Strongly Disagree(1)</a>
+                <a class="text-right float-right text-success">Strongly Agree(5)</a>
+            </p>
+        </div>
+        <!-- Submit Button -->
+        <br>
+        <button type="submit" class="btn btn-info btn-lg btn-block" id="submit">Submit</button>
+        <br>
+        <footer class="footer">
+            <div class="container-fluid">
+                <p>
+                    <a href="/api/friends">API Friends List</a> |
+                    <a href="https://github.com/vschaitu/Friend_Finder" target="_blank">GitHub Repo</a>
+                </p>
+            </div>
+        </footer>
+    </div>
+
+    <script type="text/javascript">
+
+        function createFriend (name,photo,scores) {
+              this.name = name;
+              this.photo = photo;
+              this.scores = scores
+        }
+
+        // When user submits the survery below logic gets executed 
+    
+        $("#submit").on("click", function(event) {
+
+          event.preventDefault();
+
+          // get name & photo details
+          var name = $('#name').val().trim();
+          var photo = $('#photo').val().trim();
+          
+          if (name == "" || photo == "" ) {
+            alert("Must provide name & Photo!");
+            return false
+          }
+          
+
+          // get all options values
+          var scores = [];
+          for (i = 0; i < $('.wrapquestion .custom-range').length; i++) {
+              scores.push($('.wrapquestion .custom-range')[i].value);
+            };
+        
+          var newFriend = new createFriend(name,photo,scores);
+
+          // post the successfully validated request to server
+    
+          $.post("/api/friends", newFriend,
+            function(data) {
+    
+              // response receive as true, we are successful.
+              if (data) {
+                alert("Yay!");
+              }
+    
+              // If a table is available... tell user they on the waiting list.
+              else {
+                alert("something went wrong! please try again!");
+              }
+    
+            });
+    
+        });
+    
+    </script>
+
+</body>
+
+</html>
